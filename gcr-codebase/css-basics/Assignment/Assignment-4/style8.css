@@ -1,0 +1,170 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    background-color: #d6d3d1;
+
+    color: #222;
+}
+
+
+/* Newspaper container */
+.newspaper {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    background-color: #fffdf5;
+
+    border: 2px solid #333;
+}
+
+
+/* Main newspaper title */
+.newspaper > h1 {
+    text-align: center;
+
+    font-size: 48px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 5px double #222;
+
+    margin-bottom: 20px;
+}
+
+
+/* Heading spans all columns */
+.main-heading {
+    column-span: all;
+
+    text-align: center;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+/* Date */
+.date {
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #666;
+
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid #999;
+
+    padding-bottom: 15px;
+}
+
+
+/* Three vertical columns */
+article {
+    column-count: 3;
+
+    column-gap: 40px;
+
+    column-rule: 1px solid #aaa;
+
+    text-align: justify;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* Paragraph spacing */
+article p {
+    margin-bottom: 20px;
+}
+
+
+/* Image aligned to the left */
+.article-image {
+    float: left;
+
+    width: 180px;
+
+    height: 130px;
+
+    object-fit: cover;
+
+    margin: 0 15px 10px 0;
+
+    border: 2px solid #333;
+}
+
+
+/* Responsive - Tablet */
+@media screen and (max-width: 900px) {
+
+    .newspaper {
+        width: 95%;
+
+        padding: 25px;
+    }
+
+    article {
+        column-count: 2;
+
+        column-gap: 30px;
+    }
+
+    .newspaper > h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* Responsive - Mobile */
+@media screen and (max-width: 600px) {
+
+    .newspaper {
+        width: 95%;
+
+        padding: 20px;
+    }
+
+    article {
+        column-count: 1;
+
+        column-gap: 0;
+
+        column-rule: none;
+    }
+
+    .newspaper > h1 {
+        font-size: 32px;
+    }
+
+    .main-heading {
+        font-size: 25px;
+    }
+
+    .article-image {
+        width: 150px;
+
+        height: 110px;
+    }
+}
